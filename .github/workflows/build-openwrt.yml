@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/ACwifidude/openwrt
-  REPO_BRANCH: openwrt-22.03-nss-qsdk10.0
+  REPO_BRANCH: kernel5.10-nss-qsdk10.0
   BRANCH: R7800-with-NSS
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -29,17 +29,14 @@ env:
   DIY_P2_SH: diy-part2.sh
   FEED_CLEAN: feed-clean.sh
   DEF_SETS: zzz-default-settings
-  UPLOAD_BRANCH: true
+  UPLOAD_BRANCH: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: true
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
-  BUILD_USER: Mapdio
-  GITHUB_USER_NAME: mapdio
-  GITHUB_USER_EMAIL: ${{ secrets.EMAIL }}
-  GITHUB: github.com/mapdio/R7800-Openwrt-with-NSS.git
+  BUILD_USER: eric
   
 jobs:
   build:
